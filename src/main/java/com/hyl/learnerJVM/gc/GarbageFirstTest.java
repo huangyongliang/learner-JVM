@@ -15,12 +15,13 @@ public class GarbageFirstTest {
 
     private byte[] bigSize = new byte[4 * _1MB];
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         GarbageFirstTest garbageFirstTest = new GarbageFirstTest();
         GarbageFirstTest garbageFirstTestA = new GarbageFirstTest();
 
         garbageFirstTest = null;
         garbageFirstTestA = null;
+
         System.gc();
     }
 }
