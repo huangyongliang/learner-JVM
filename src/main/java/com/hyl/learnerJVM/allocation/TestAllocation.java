@@ -13,7 +13,7 @@ public class TestAllocation {
 
     private static final int _1MB = 1024 * 1024;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         // 防止虚拟机自动新建的对象干扰测试
         System.gc();
 
@@ -28,7 +28,7 @@ public class TestAllocation {
         // allocation4 = new byte[6 * _1MB];
 
         // allocation3 = new byte[4 * _1MB];
-
+        Thread.sleep(100000);
     }
 
 }
