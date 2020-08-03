@@ -28,7 +28,7 @@ public class TestAllocation {
         // allocation4 = new byte[6 * _1MB];
 
         // allocation3 = new byte[4 * _1MB];
-        Thread.sleep(100000);
+        // Thread.sleep(100000);
     }
 
 }
