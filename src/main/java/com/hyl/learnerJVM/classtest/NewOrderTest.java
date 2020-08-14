@@ -10,7 +10,7 @@ package com.hyl.learnerJVM.classtest;
 public class NewOrderTest {
 
     public static void main(String[] args)  {
-        System.out.println(SuperClass.value);
+        System.out.println(SubClass.value);
 
 
 
