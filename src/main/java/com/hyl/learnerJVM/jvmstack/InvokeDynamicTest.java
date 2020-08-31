@@ -20,18 +20,18 @@ public class InvokeDynamicTest {
         return new ConstantCallSite(lookup.findStatic(InvokeDynamicTest.class, name, mt));
     }
 
-    public static MethodType MT_BootstrapMethod() {
+    private static MethodType MT_BootstrapMethod() {
         return MethodType.fromMethodDescriptorString(
             "(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;",
             null);
     }
 
-    public static MethodHandle MH_BootstrapMethod() throws Throwable {
+    private static MethodHandle MH_BootstrapMethod() throws Throwable {
         return MethodHandles.lookup()
             .findStatic(InvokeDynamicTest.class, "BootstrapMethod", MT_BootstrapMethod());
     }
 
-    public static MethodHandle INDY_BootstrapMethod() throws Throwable{
+    private static MethodHandle INDY_BootstrapMethod() throws Throwable{
         CallSite cs = (CallSite)MH_BootstrapMethod().invokeWithArguments(MethodHandles.lookup(),"testMethod",MethodType.fromMethodDescriptorString("(Ljava/lang/String;)V",null));
         return cs.dynamicInvoker();
     }

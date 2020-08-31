@@ -13,7 +13,7 @@ public class ExampleTest {
             "--verbose",
             "--expand-properties", "--classpath", "${java.class.path}",
             /*输入class文件Example.class的全路径,然后使用javap打开该文件*/
-            "D:\\git\\mybase\\projects\\github\\learner-JVM\\target\\classes\\com\\hyl\\learnerJVM\\jvmstack\\tool\\InvokeDynamicTest.class");
+            "D:\\git\\mybase\\projects\\github\\learner-JVM\\target\\classes\\com\\hyl\\learnerJVM\\jvmstack\\InvokeDynamicTest.class");
         //Example.main();
     }
 }
