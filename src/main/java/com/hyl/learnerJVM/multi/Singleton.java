@@ -23,6 +23,11 @@ public class Singleton {
         return instance;
     }
 
+    public void get(){
+        final int m = 1;
+        System.out.println(m);
+    }
+
     public static void main(String[] args) {
         Singleton.getInstance();
     }
