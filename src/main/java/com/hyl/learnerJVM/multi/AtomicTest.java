@@ -26,6 +26,7 @@ public class AtomicTest {
                     increase();
                 }
             });
+
             threads[i].start();
         }
 
